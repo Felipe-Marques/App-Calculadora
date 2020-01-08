@@ -58,4 +58,16 @@ body {
 .enter {
   height: 110px;
 }
+
+@media (min-width: 320px) and (max-width: 359.98px) {
+  .btn {
+    width: 50px;
+  }
+  .clear {
+    width: 110px;
+  }
+  .zero {
+    width: 110px;
+  }
+}
 /*# sourceMappingURL=principal.css.map */
