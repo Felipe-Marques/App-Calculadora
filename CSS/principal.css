@@ -1,0 +1,61 @@
+body {
+  background: #babbbd;
+}
+
+.row {
+  margin: 0;
+}
+
+.last_row {
+  margin-top: -60px;
+}
+
+.calculadora {
+  margin-top: 50px;
+  width: 300px;
+  background: #2E2E2E;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.visor {
+  padding: 10px;
+  background: #ecd7aa;
+  margin: 0 5px;
+}
+
+.brand-name {
+  font-size: 0.6em;
+  font-family: cursive;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.result {
+  width: 200px;
+  border-style: solid;
+  border-width: 2px 10px;
+  border-color: #e1c184;
+  background: #b6bfac;
+  text-align: right;
+  font-size: 20px;
+  margin: 10px auto 20px auto;
+}
+
+.btn {
+  width: 60px;
+  height: 50px;
+  margin: 5px;
+  -webkit-box-shadow: 1px 1px 3px #000;
+          box-shadow: 1px 1px 3px #000;
+}
+
+.clear, .zero {
+  width: 130px;
+}
+
+.enter {
+  height: 110px;
+}
+/*# sourceMappingURL=principal.css.map */

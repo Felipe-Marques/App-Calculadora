@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="author" content="Felipe de Souza Marques">
+    <meta name="description" content="Projeto do curso de desenvolvimento Web.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Calculadora</title>
+
+    <!--CDN Bootstrap4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome Cdn-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+    <!--CSS Customizado-->
+    <link rel="stylesheet" href="CSS/principal.css">
+
+</head>
+
+<body>
+
+    <!-- #INICIO - CONTAINER PRINCIPAL-->
+    <div class="container">
+
+        <!-- #INICIO - ROW PRINCIPAL-->
+        <div class="row">
+
+            <div class="col d-flex justify-content-center">
+                <br>
+
+                <!-- #INICIO - DIV PRINCIPAL DA CALCULADORA-->
+                <div class="calculadora">
+
+                    <!-- #INICIO - ROW SCREEN RESULT-->
+                    <div class="row visor">
+                        <input type="text" class="form-control result" id="resultado" placeholder="0" disabled>
+
+                        <div class="align-text-center text-right w-100">
+                            <strong class="brand-name">Dev-Marques</strong>
+                            <i class="fas fa-calculator "></i>
+                        </div>
+                    </div>
+                    <!-- #FIM - ROW SCREEN RESULT-->
+
+                    <!--Pulando linha-->
+                    <br>
+
+                    <!-- #INICIO - ROW BOTÕES CLEAR, DIVISÃO E MULTIPLICAÇÃO-->
+                    <div class="row ">
+                        <button onclick="calcular('acao', 'C')" type="button " class="btn btn-dark btn-lg clear font-weight-light ">C</button>
+                        <button onclick="calcular('acao', '/')" type="button " class="btn btn-dark btn-lg font-weight-light ">/</button>
+                        <!--Multiplicar representado pelo operador '*'-->
+                        <button onclick="calcular('acao', '*')" type="button " class="btn btn-dark btn-lg font-weight-light ">X</button>
+                    </div>
+                    <!-- #FIM - ROW BOTÕES CLEAR, DIVISÃO E MULTIPLICAÇÃO-->
+
+                    <!-- #INICIO - ROW BOTÕES 7,8,9 E SUBTRAÇÃO-->
+                    <div class="row ">
+                        <button onclick="calcular('valor', 7)" type="button " class="btn btn-dark btn-lg font-weight-light ">7</button>
+                        <button onclick="calcular('valor', 8)" type="button " class="btn btn-dark btn-lg font-weight-light ">8</button>
+                        <button onclick="calcular('valor', 9)" type="button " class="btn btn-dark btn-lg font-weight-light ">9</button>
+                        <button onclick="calcular('acao', '-')" type="button " class="btn btn-dark btn-lg font-weight-light ">-</button>
+                    </div>
+                    <!-- #FIM - ROW BOTÕES 7,8,9 E SUBTRAÇÃO-->
+
+                    <!-- #INICIO - ROW BOTÕES 4,5,6 E SOMA-->
+                    <div class="row ">
+                        <button onclick="calcular('valor', 4)" type="button " class="btn btn-dark btn-lg font-weight-light ">4</button>
+                        <button onclick="calcular('valor', 5)" type="button " class="btn btn-dark btn-lg font-weight-light ">5</button>
+                        <button onclick="calcular('valor', 6)" type="button " class="btn btn-dark btn-lg font-weight-light ">6</button>
+                        <button onclick="calcular('acao', '+')" type="button " class="btn btn-dark btn-lg font-weight-light ">+</button>
+                    </div>
+                    <!-- #FIM - ROW BOTÕES 4,5,6 E SOMA-->
+
+                    <!-- #INICIO - ROW BOTÕES 1,2,3 E RESULTADO-->
+                    <div class="row ">
+                        <button onclick="calcular('valor', 1)" type="button " class="btn btn-dark btn-lg font-weight-light ">1</button>
+                        <button onclick="calcular('valor', 2)" type="button " class="btn btn-dark btn-lg font-weight-light ">2</button>
+                        <button onclick="calcular('valor', 3)" type="button " class="btn btn-dark btn-lg font-weight-light ">3</button>
+                        <button onclick="calcular('acao', '=')" type="button " class="btn btn-dark btn-lg enter ">=</button>
+                    </div>
+                    <!-- #FIM - ROW BOTÕES 1,2,3 E RESULTADO-->
+
+                    <!-- #INICIO - ROW BOTÕES 0 E PONTO-->
+                    <div class="row last_row ">
+                        <button onclick="calcular('valor', 0)" type="button " class="btn btn-dark zero btn-lg font-weight-light ">0</button>
+                        <button onclick="calcular('acao', '.')" type="button " class="btn btn-dark btn-lg font-weight-light ">.</button>
+                    </div>
+                    <!-- #FIM - ROW BOTÕES 0 E PONTO-->
+
+                </div>
+                <!-- #FIM - DIV PRINCIPAL DA CALCULADORA-->
+
+            </div>
+
+        </div>
+        <!-- #FIM - ROW PRINCIPAL-->
+
+    </div>
+    <!-- #FIM - CONTAINER PRINCIPAL-->
+
+
+    <!--Script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+
+    <!--Script Personalizado-->
+    <script src="./JS/my_script.js"></script>
+
+</body>
+
+</html>
