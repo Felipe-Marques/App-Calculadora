@@ -2,6 +2,15 @@ body {
   background: #babbbd;
 }
 
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #464646;
+}
+
 .row {
   margin: 0;
 }
